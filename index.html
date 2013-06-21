@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Techlive Zheng's Resume</title>
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            width: 960px;
+            margin: 0px auto;
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+        }
+        #about-me {
+            float: left;
+            width: 100%;
+            clear: both;
+        }
+        #profile-image {
+            float: right;
+            margin-right: 50px;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+        }
+        body.en :lang(zh) {
+            display: none;
+        }
+        body.zh :lang(en) {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        $( document ).ready(function() {
+            $("#en").click(function(){
+                document.body.className = 'en';
+            });
+            $("#zh").click(function(){
+                document.body.className = 'zh';
+            });
+        });
+    </script>
+</head>
+<body class="en">
+    <header>
+        <h1>Techlive Zheng（郑文辉）</h1>
+    </header>
+    <main>
+        <section id="language-switcher">
+            <button id="en">English</button>|<button id="zh">简体中文</button>
+        </section>
+        <section id="about-me">
+            <h2><span lang="en">About Me</span><span lang="zh">关于我</span></h2>
+            <section>
+                <img id="profile-image" src="https://secure.gravatar.com/avatar/b77db67c17b558ee22bb5236f135a845.png?s=240" alt="Profile Image" />
+                <p lang="en">Hey, I am Techlive Zheng（郑文辉）, a Chinese Web Developer, specialized in Drupal development, currently located in Ningbo, China.</p>
+                <p lang="zh">你好，我是郑文辉，一名 PHP 开发者，现居宁波。</p>
+                <p lang="en">I love designs that are simple, elegant and flexible. I use tools, like Linux, Git, Vim, which could improve efficiency.</p>
+                <p lang="zh">我喜欢简单、优雅而又灵活的设计。我使用 Linux、Git、Vim 等能够提高生产力的工具。</p>
+            </section>
+            <section>
+                <h3><span lang="en">Public Links</span><span lang="zh">社交链接</span></h3>
+                <ul>
+                    <li>Github: <a href="https://github.com/techlivezheng">https://github.com/techlivezheng</a></li>
+                    <li>Google: <a href="https://plus.google.com/u/0/+TechliveZheng">https://plus.google.com/u/0/+TechliveZheng</a></li>
+                    <li>Linkedin: <a href="http://www.linkedin.com/pub/techlive-zheng/41/a88/557">http://www.linkedin.com/pub/techlive-zheng/41/a88/557</a></li>
+                    <li>StackOverflow: <a href="http://stackoverflow.com/users/1094962/techlive-zheng">http://stackoverflow.com/users/1094962/techlive-zheng</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3><span lang="en">Slogans I follow</span><span lang="zh">开发信条</span></h3>
+                <ul>
+                    <li>Do one thing, do it well.</li>
+                    <li>Keep things simple and stupid.</li>
+                </ul>
+            </section>
+            <section>
+                <h3><span lang="en">Philosophy I believe</span><span lang="zh">编码哲学</span></h3>
+                <ul>
+                    <li>
+                        <p><a href="https://en.wikipedia.org/wiki/Unix_philosophy">Unix Philosophy</a></p>
+                        <blockquote>Write programs that do one thing and do it well. Write programs to work together. Write programs to handle text streams, because that is a universal interface.</blockquote>
+                    </li>
+                    <li>
+                        <p><a href="http://suckless.org/philosophy">Suckless Philosophy</a></p>
+                        <blockquote>Ingenious ideas are simple. Ingenious software is simple. Simplicity is the heart of the Unix philosophy. The more code lines you have removed, the more progress you have made. As the number of lines of code in your software shrinks, the more skilled you have become and the less your software sucks.</blockquote>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+    <aside>
+    </aside>
+    <footer>
+    </footer>
+</body>
+</html>
