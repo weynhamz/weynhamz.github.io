@@ -180,14 +180,14 @@
                         <p lang="zh">我经常需要维护多个 Linux 主机，每个都有自己的一组 dot files，而其中的大部分是在多个主机之间通用的。我想应该有办法可以集中的管理这些文件，然后根据主机名和用户名进行部署，然而，我并没有找到能够让我满意的方案。在我看来，做这件事情工具最好是使用 Shell 脚本写的，或者至少是 Perl 脚本。于是，我造了我自己的轮子。dotploy 使用 Bash 写成，并不严格遵守 POSIX 规范，因为 Bash 在很多发行版上都是默认的 Shell。通过维护一个 dot files 的中央仓库，然后使用 dropbox 或者任何 VSC 工具同步到目标主机，剩下的工作 dotploy 自会搞定。</p>
                     </li>
                     <li>
-                        <a href="https://github.com/techlivezheng/phpctags">PHPCtags</a>
+                        <a href="http://techlivezheng.github.io/phpctags/">PHPCtags</a>
                         <p lang="en">An enhanced ctags compatible index generator written in pure PHP.</p>
                         <p lang="zh">一个 PHP 写的 ctags 兼容的索引生成器。</p>
                         <p lang="en"><a href="http://ctags.sourceforge.net/">Ctags</a> is a very useful tool for programmers, but the support for PHP is limited. As a PHP developer, I have the desire for a better tags file with scope and access support. As a result, instead of patching the current Ctags' C code, I decide to write a new tags generator written in pure PHP, this is how this project was born. It uses <a href="https://github.com/nikic/PHP-Parser">PHP_Parser</a> as PHP syntax parsing backend. The tags index file it generated is compatible with ctags' <a href="http://ctags.sourceforge.net/FORMAT">fromat</a>.</p>
                         <p lang="zh"><a href="http://ctags.sourceforge.net/">Ctags</a>对于程序员来说是一个非常有用的工具，但是它对 PHP 的支持却非常有限。作为一个 PHP 程序员，我需要一个包含作用域和访问控制信息的 tags 文件，经过一番研究，与其给 Ctags 的 C 代码打补丁，还不如使用 PHP 从头写一个，于是 PHPCtags 就这么诞生了。它使用 <a href="https://github.com/nikic/PHP-Parser">PHP_Parser</a> 做为词法分析器，能够产生兼容 ctags <a href="http://ctags.sourceforge.net/FORMAT">格式</a>的 tags 索引文件。</p>
                     </li>
                     <li>
-                        <a href="https://github.com/techlivezheng/vim-plugin-tagbar-phpctags">tagbar-phpctags.vim</a>
+                        <a href="http://techlivezheng.github.io/vim-plugin-tagbar-phpctags/">tagbar-phpctags.vim</a>
                         <p lang="en">An addon for Jan Larres's <a href="http://majutsushi.github.io/tagbar/">tagbar</a> Vim plugin that makes use of my <a href="https://github.com/techlivezheng/phpctags">PHPCtags</a> to generate tags index for PHP file.</p>
                         <p lang="zh">一个 Jan Larres 写的 <a href="http://majutsushi.github.io/tagbar/">tagbar</a> Vim 插件的补充，使用 <a href="https://github.com/techlivezheng/phpctags">PHPCtags</a> 生成的 tags 索引文件。</p>
                     </li>
@@ -197,7 +197,7 @@
                 <h3><span lang="en">Projects I Maintaining</span><span lang="zh">维护的项目</span></h3>
                 <ul>
                     <li>
-                        <a href="https://github.com/fholgado/minibufexpl.vim">minibufexpl.vim</a>
+                        <a href="http://techlivezheng.github.io/vim-plugin-minibufexpl/">minibufexpl.vim</a>
                         <p lang="en">A Vim plugin that shows buffers list in a tab-like fashion with status info.</p>
                         <p lang="zh">一个用来以标签页的形式现实缓冲区列表和状态的插件。</p>
                         <p lang="en">It was first published as <a href="http://www.vim.org/scripts/script.php?script_id=159">minibufexpl.vim</a> by <a href="http://www.wavell.net">Bindu Wavell</a> at the end of the year 2001 and last updated by him at the end of the year 2004. Since then, as it is such a useful plugin, many volunteers continued improving it, hence here came <a href="https://github.com/OliverUv">Oliver Uvman</a>'s <a href="http://www.vim.org/scripts/script.php?script_id=3239">minibufexplorer++</a>. After Oliver, <a href="https://github.com/fholgado">Federico Holgado</a> took the torch, he made a lot improvements in <a href="https://github.com/fholgado/minibufexpl.vim">his fork on github</a>.</p>
