@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="://www.youziku.com/UserDownFile/jquery.md5.js"></script>
     <style type="text/css" media="screen">
         body {
             width: 960px;
             margin: 0px auto;
             font-family: sans-serif;
+        }
+        :lang(zh) {
+            font-family: HanWangAvKaiSu37367;
         }
         h1 {
             text-align: center;
@@ -36,6 +40,37 @@
         }
     </style>
     <script type="text/javascript">
+        function youziku() {
+            var resultStr = "";
+
+            $(":lang(zh)").each(function () {
+                resultStr += $(this).text();
+            });
+
+            resultStr = Trim(resultStr);
+            resultStr = SelectWord(resultStr);
+
+            var md5 = $.md5("HanWangAvKaiSu" + resultStr);
+            $.getJSON("http://www.youziku.com/webfont/CSSPOST?jsoncallback=?", { "id": md5, "guid": "0a26346152294b88b52bb2bd157ee356", "type": "2" }, function (json) {
+                if (json.result == 0) {
+                    console.log("需要生成");
+                    $.post("http://www.youziku.com/webfont/PostCorsCreateFont", { "name": "HanWangAvKaiSu", "guid": "0a26346152294b88b52bb2bd157ee356", "text": resultStr }, function (json) {
+                        if (json == "0") {
+                            console.log("参数不对，请检查name,guid,type是否正确。");
+                        } else if (json == "2") {
+                            console.log("超过每日生成字体数的上限");
+                        } else if (json == "3") {
+                            console.log("当前正在生成请稍后");
+                        } else {
+                            console.log("正在生成，第一次调用需要生成 webfont 文件，文件生成一般只需几秒，安全起见请您在30s后刷新页面。");
+                        }
+                    });
+                } else {
+                    console.log("下载css文件");
+                    loadExtentFile("http://www.youziku.com/webfont/css?id=" + md5 + "&guid=" + "0a26346152294b88b52bb2bd157ee356" + "&type=2");
+                }
+            });
+        }
         $( document ).ready(function() {
             $("#en").click(function(){
                 document.body.className = 'en';
@@ -43,6 +78,8 @@
             $("#zh").click(function(){
                 document.body.className = 'zh';
             });
+
+            youziku();
         });
     </script>
 </head>
